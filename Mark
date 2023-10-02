@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Leslie : MonoBehaviour
+{
+
+    float vertMovement;
+    string Variable1;
+    string Variable2;
+    string Variable3;
+    string Variable4;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+        vertMovement = 3;
+
+        Variable1 = "I ";
+        Variable2 = "want ";
+        Variable3 = "100 ";
+        Variable4 = "pancakes.";
+
+        Debug.Log(Variable1 + Variable2 + Variable3 + Variable4);
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        vertMovement = Input.GetAxis("Vertical");
+        if (Input.GetButtonDown("Vertical"))
+        {
+
+            transform.Translate(0, vertMovement, 0);
+
+        }
+    }
+}
